@@ -11,5 +11,5 @@ This software consists of a MySQL database, a Java Springboot backend, and an An
 
 ## Contributors
 This project was developed by:
-Mhyar Kousa
-Kunigunda Bagoly
+* Mhyar Kousa
+* Kunigunda Bagoly
