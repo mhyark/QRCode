@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="jumbotron">
+        <div *ngIf="initdone">
+            <div *ngIf="!loggedintoday; then thenBlock else elseBlock"></div> <!-- generate QR code only if the user didn't logged in already -->
+                <ng-template #thenBlock>
+                    <form [formGroup]="workedHours" *ngIf="!hourcheck">
+                    <label for="password">Today's worked/planned hours *:</label>
+                                <input 
+                                    formControlName="hour"
+                                    name="hour"
+                                    id="hour"  
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="hour...">
+                                <div *ngIf="hour.errors && hour.touched" class="form-group alert alert-warning">Hour is required!</div>
+                                <button (click)="btnSubmit()" [disabled]="workedHours.invalid" class="btn btn-primary">
+                                    Submit
+                                </button>
+                            </form>
+                        <div *ngIf="hourcheck">
+                            <div class="qr-code">
+                                <h5>Scan this QR code to log in:</h5>
+                                <!--<qr-code value="https://9gag.com/" size="300" errorCorrectionLevel="M"></qr-code>-->
+                                <qr-code value="http://localhost:8080/workdays/logday" size="300" errorCorrectionLevel="M"></qr-code>
+                            </div>
+                        </div>
+                </ng-template>
+                <ng-template #elseBlock>
+                    <p class="mb-0 text-success message">Nothing to do. You already logged in to attendance tracker today 😊.</p>
+                </ng-template>
+                <hr>
+                <br>
+                <br>
+                <p class="text-muted">Do you want to view your attendance sheets?</p>
+                <button routerLink='/attendance' type="button" class="btn btn-warning">View attendance sheets</button>
+        </div>
+    </div>
+</div>

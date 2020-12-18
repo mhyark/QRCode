@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="jumbotron">
+        <div *ngIf="initdone">
+            <h2>My profile</h2>
+            <hr>
+            <p>Name: {{ employee.name }}</p>
+            <p>E-mail: {{ employee.email }}</p>
+            <p>organization {{ employee.organization }}</p>
+            <p>Job function: {{ employee.jobFunction }}</p>
+            <p>Manager: {{ employee.manager }}</p>
+            <p>Hourly wage: {{ employee.hourlyWage }} HUF</p>
+            
+            <br>
+            <button routerLink='/edit-profile' type="button" class="btn btn-warning">Edit profile</button>
+        </div>
+    </div>
+</div>

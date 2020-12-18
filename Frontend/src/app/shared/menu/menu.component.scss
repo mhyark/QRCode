@@ -1,0 +1,10 @@
+.nav-item-right {
+    vertical-align: right;
+}
+
+.navbar-expand-lg {
+    display: flex;
+    .navbar-collapse {
+        flex-grow: 0;
+    }
+}

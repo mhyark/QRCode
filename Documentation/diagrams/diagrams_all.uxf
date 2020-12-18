@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>16</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>0</x>
+      <y>432</y>
+      <w>128</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>Employee</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>560</x>
+      <y>0</y>
+      <w>304</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>
+Register
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>560</x>
+      <y>112</y>
+      <w>304</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>
+Login
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>560</x>
+      <y>208</y>
+      <w>304</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>
+Logout
+
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>560</x>
+      <y>304</y>
+      <w>304</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>
+Generate QR code
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>560</x>
+      <y>400</y>
+      <w>304</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>
+Read QR code
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>560</x>
+      <y>496</y>
+      <w>304</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>
+View Profile
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>560</x>
+      <y>592</y>
+      <w>304</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>
+Edit Profile
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>560</x>
+      <y>688</y>
+      <w>304</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>View attendance / month
+(past months also)
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>560</x>
+      <y>816</y>
+      <w>304</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Calculate salary 
+for current month
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>560</x>
+      <y>960</y>
+      <w>304</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>? Export attend. sheet ?
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>16</y>
+      <w>496</w>
+      <h>512</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;300.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>128</y>
+      <w>496</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;230.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>224</y>
+      <w>496</w>
+      <h>304</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;170.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>320</y>
+      <w>496</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;110.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>416</y>
+      <w>496</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;50.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>480</y>
+      <w>496</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>480</y>
+      <w>496</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>480</y>
+      <w>496</w>
+      <h>304</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>480</y>
+      <w>496</w>
+      <h>544</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>480</y>
+      <w>496</w>
+      <h>544</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1104</x>
+      <y>80</y>
+      <w>528</w>
+      <h>448</h>
+    </coordinates>
+    <panel_attributes>{Entity}
+Employee
+--
+{Attributes}
+- company-email #ID Unique
+- name
+- password
+- organization
+- job function
+- manager
+- hourly wage
+--
+{Controller Methods}
+getAll()
+findEmployeeByEmail(@PathVariable String email)
+createEmployee(@RequestBody EmployeeRequest employReq)
+login(@RequestBody EmployeeRequest employReq)
+editEmployee(@PathVariable String email, @RequestBody EmployeeRequest employReq)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>976</x>
+      <y>608</y>
+      <w>848</w>
+      <h>368</h>
+    </coordinates>
+    <panel_attributes>{Entity}
+Workday
+--
+{Attributes}
+- id # ID Unique Autogen
+- date
+- starttime
+- endtime
+--
+{Methods}
+getAll() //Helper
+findWorkdayById(@PathVariable Integer id)
+getWorkdaysByMonths(@PathVariable String email, @PathVariable Integer month)
+loggedInToday()
+createWorkday(@RequestBody WorkdayRequest workdayReq)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1344</x>
+      <y>512</y>
+      <w>128</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..many</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>480</y>
+      <w>496</w>
+      <h>432</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2032</x>
+      <y>32</y>
+      <w>992</w>
+      <h>672</h>
+    </coordinates>
+    <panel_attributes>_BACKEND ENDPOINTS_
+--
+/Workdays:/ 
+fg=blue
+/workdays/ - GET; lists all the workdays from the database
+
+/workdays/{id} - GET; finds and returns the workday with the given id
+
+/workdays/month/{email}/{month} - GET; finds the workdays in the given month 
+											 that belong to the user with the given email
+											 
+/workdays/loggedintoday/{email} - GET; returns true if the user with the given email already logged 
+											 in that day, false otherwise
+											 
+/workdays/logday + JSON WorkdayObject - POST; registers in the user for the current day
+
+/Employees:/
+/employees/ - GET; lists all the employees from the database
+
+/employees/{email} - GET; finds and returns the employee with the given email
+
+/employees/new + JSON EmployeeObject - POST; creates a new user
+
+/employees/login + JSON EmployeeObject - POST; checks the passwords, 
+													  returns the user object if it was correct login data
+													  
+/employees/edit/{email} + JSON EmployeeObject - PUT; edits the user's data
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

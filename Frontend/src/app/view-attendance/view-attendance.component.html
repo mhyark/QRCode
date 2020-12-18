@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>View Attendance Sheets</h1>
+        <hr>
+        <p>Please select a month:</p>
+        <form [formGroup]="selectedMonth">
+            <mat-form-field appearance="fill">
+                <mat-label>Select a month</mat-label>
+                <mat-select formControlName="month">
+                    <mat-option *ngFor="let m of months; let i=index" value={{i}}>{{ months[i] }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button class="btn btn-primary mr-1 mybutton" type="button" (click)="onSelect()">Select</button>
+        </form>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend addon">
+            <span class="input-group-text"><svg class="bi bi-funnel" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 012 1h12a.5.5 0 01.5.5v2a.5.5 0 01-.128.334L10 8.692V13.5a.5.5 0 01-.342.474l-3 1A.5.5 0 016 14.5V8.692L1.628 3.834A.5.5 0 011.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 017 8.5v5.306l2-.666V8.5a.5.5 0 01.128-.334L13.5 3.308V2h-11z" clip-rule="evenodd"/>
+            </svg></span>
+            </div>
+            <input class="form-control" type="text" name="search" if="form-control-input"
+                [(ngModel)]="searchText" autocomplete="off" 
+                placeholder="Search in the table...">
+            </div>
+            <table class="table table-dark table-bordered table-hover text-light">
+                <thead class="thead-light">
+                <tr>
+                    <th>#</th>
+                    <th>Date of logging in</th>
+                    <th>Hours worked</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let wday of workedDays | filter:searchText" class="mytablerow">
+                    <td>{{ wday.id }}</td>
+                    <td>{{ wday.startTime }}</td>
+                    <td>{{ wday.workedHours }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div *ngIf="this.workedDays.length > 0 && employeeDataFetched">
+                <hr>
+                <h5>Total worked hours in this month: {{ sumWorkedHours }}.</h5>
+                <h5>Payment received: {{ sumPayment }} HUF.</h5>                
+            </div>
+        <div>
+    </div>
+</div>

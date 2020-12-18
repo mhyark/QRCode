@@ -1,0 +1,15 @@
+button {
+    margin-bottom: 10px;
+}
+
+::ng-deep .nav-pills .nav-link.active, 
+::ng-deep .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #2AA198;
+    margin-bottom: 0px;
+}
+
+hr {
+    padding-top: -5px;
+    background-color: #2AA198;
+}

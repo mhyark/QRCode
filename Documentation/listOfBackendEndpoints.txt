@@ -1,0 +1,27 @@
+BACKEND ENDPOINTS
+--
+Workdays:
+
+/workdays/ - GET; lists all the workdays from the database
+
+/workdays/{id} - GET; finds and returns the workday with the given id
+
+/workdays/month/{email}/{month} - GET; finds the workdays in the given month 
+								  that belong to the user with the given email
+											 
+/workdays/loggedintoday/{email} - GET; returns true if the user with the given email already logged 
+								  in that day, false otherwise
+											 
+/workdays/logday + JSON WorkdayObject - POST; registers in the user for the current day
+
+Employees:
+/employees/ - GET; lists all the employees from the database
+
+/employees/{email} - GET; finds and returns the employee with the given email
+
+/employees/new + JSON EmployeeObject - POST; creates a new user
+
+/employees/login + JSON EmployeeObject - POST; checks the passwords, 
+										 returns the user object if it was correct login data
+													  
+/employees/edit/{email} + JSON EmployeeObject - PUT; edits the user's data

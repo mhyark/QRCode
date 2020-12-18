@@ -1,0 +1,135 @@
+<div class="container">
+    <div class="jumbotron">
+        <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="Login">
+                <br>
+                <h2>Login</h2>
+                        <form [formGroup]="loginForm">
+                            <div class="form-group">
+                                <label for="email">E-mail address: *</label>
+                                <input 
+                                    formControlName="email"
+                                    name="email"
+                                    id="email"  
+                                    type="text" 
+                                    class="form-control"
+                                    placeholder="e-mail...">
+                                <div *ngIf="email.errors && email.touched" class="form-group alert alert-warning" align="start">
+                                    <div *ngIf="email.errors.required && email.touched">
+                                        E-mail is required!
+                                    </div>
+                                    <div *ngIf="email.errors.email">
+                                        Wrong e-mail format!
+                                    </div>
+                                </div>
+                                <br>
+                                <label for="password">Password *:</label>
+                                <input 
+                                    formControlName="password"
+                                    name="password"
+                                    id="password"  
+                                    type="password"
+                                    class="form-control"
+                                    placeholder="password...">
+                                <div *ngIf="password.errors && password.touched" class="form-group alert alert-warning">Password is required!</div>
+                            </div>
+                            <div class="form-group buttons">
+                                <button (click)="onLoginSubmit()" [disabled]="loading && loginForm.invalid" class="btn btn-primary">
+                                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                    Login
+                                </button>
+                            </div>
+                            <div *ngIf="serverError" class="alert alert-warning">{{serverErrorMsg}}</div>
+                        </form>
+            </mat-tab>
+            <mat-tab label="Registration">
+                <br>
+                <h2>Registration</h2>
+                <form [formGroup]="registForm">
+                    <label for="email">E-mail address: *</label>
+                        <input 
+                            formControlName="email"
+                            name="email"
+                            id="email"  
+                            type="text" 
+                            class="form-control"
+                            placeholder="e-mail...">
+                        <div *ngIf="regEmail.errors && regEmail.touched" class="form-group alert alert-warning" align="start">
+                            <div *ngIf="regEmail.errors.required && regEmail.touched">
+                                E-mail is required!
+                            </div>
+                            <div *ngIf="regEmail.errors.email">
+                                    Wrong e-mail format!
+                            </div>
+                        </div>
+                        <br>
+                        <label for="password">Password:</label>
+                        <input 
+                            formControlName="password"
+                            name="password"
+                            id="password"  
+                            type="password"
+                            class="form-control"
+                            placeholder="password...">
+                        <label for="name">Name:</label>
+                        <br>
+                        <input
+                            formControlName="name"
+                            id="name"
+                            type="text"
+                            class="form-control"
+                            placeholder="name..."
+                        >
+                        <div *ngIf="regName.errors.required && regName.touched">
+                            Name is required!
+                        </div>
+                        <br>
+                        <label for="organization">Organization:</label>
+                        <input
+                            formControlName="organization"
+                            id="organization"
+                            type="text"
+                            class="form-control"
+                            placeholder="organization..."
+                        >
+                        <br>
+                        <label for="jobFunction">Job function:</label>
+                        <input
+                            formControlName="jobFunction"
+                            id="jobFunction"
+                            type="text"
+                            class="form-control"
+                            placeholder="jobfunction..."
+                        >
+                        <br>
+                        <label for="manager">Manager:</label>
+                        <input
+                            formControlName="manager"
+                            id="manager"
+                            type="text"
+                            class="form-control"
+                            placeholder="manager..."
+                        >
+                        <br>
+                        <label for="hourlyWage">Hourly wage:</label>
+                        <input
+                            formControlName="hourlyWage"
+                            id="hourlyWage"
+                            type="text"
+                            class="form-control"
+                            placeholder="hourly wage..."
+                        >
+                        <div *ngIf="regHourlyWage.errors && regHourlyWage.touched">
+                            <div *ngIf="regHourlyWage.errors.min">Wage should be a number higher than 0!</div>
+                        </div>
+                    <small *ngIf="regPassword.errors && regPassword.touched" class="form-group alert alert-warning">Password is required!</small>
+                    <button (click)="onRegistSubmit()" [disabled]="loading && registForm.invalid" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                        Register
+                    </button>
+                    <div *ngIf="serverError" class="alert alert-warning">{{serverErrorMsg}}</div>
+                </form>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

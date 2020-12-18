@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="jumbotron">
+
+        <form [formGroup]="myForm">
+                <label for="name">Name:</label>
+                <input
+                    formControlName="name"
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="name..."
+                >
+                <div *ngIf="regName.errors.required && regName.touched">
+                    Name is required!
+                </div>
+                <br>
+                <label for="password">Password:</label>
+                <input 
+                    formControlName="password"
+                    name="password"
+                    id="password"  
+                    type="password"
+                    class="form-control"
+                    placeholder="password...">
+               
+                <br>
+                <label for="organization">Organization:</label>
+                <input
+                    formControlName="organization"
+                    id="organization"
+                    type="text"
+                    class="form-control"
+                    placeholder="organization..."
+                >
+                <br>
+                <label for="jobFunction">Job function:</label>
+                <input
+                    formControlName="jobFunction"
+                    id="jobFunction"
+                    type="text"
+                    class="form-control"
+                    placeholder="jobfunction..."
+                >
+                <br>
+                <label for="manager">Manager:</label>
+                <input
+                    formControlName="manager"
+                    id="manager"
+                    type="text"
+                    class="form-control"
+                    placeholder="manager..."
+                >
+                <br>
+                <label for="hourlyWage">Hourly wage:</label>
+                <input
+                    formControlName="hourlyWage"
+                    id="hourlyWage"
+                    type="text"
+                    class="form-control"
+                    placeholder="hourly wage..."
+                >
+                <div *ngIf="regHourlyWage.errors && regHourlyWage.touched">
+                    <div *ngIf="regHourlyWage.errors.min">Wage should be a number higher than 0!</div>
+                </div>
+            <small *ngIf="regPassword.errors && regPassword.touched" class="form-group alert alert-warning">Password is required!</small>
+            <button (click)="onRegistSubmit()" [disabled]="loading && myForm.invalid" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Update
+            </button>
+            <div *ngIf="serverError" class="alert alert-warning">{{serverErrorMsg}}</div>
+        </form>
+
+        <div *ngIf="success != undefined">
+            <div *ngIf="success">
+                You successfully updated your profile info!
+            </div>
+            <div *ngIf="success == false">
+                Some error happened, please try again later!
+            </div>
+        </div>
+    </div>
+</div>
